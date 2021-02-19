@@ -30,6 +30,9 @@ public class ClassAttRegController implements Initializable {
     public ObservableList<Students> getStudent() {
         ObservableList<Students> student = FXCollections.observableArrayList();
         student.add( new Students("Agustin Graciano"));
+        student.add( new Students("Ivan Garcia"));
+        student.add( new Students("Ibai Llanos"));
+        student.add( new Students("Sergio Garcia"));
         return student;
     }
 }
