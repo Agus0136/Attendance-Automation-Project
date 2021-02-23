@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -72,7 +71,6 @@
                                           <Insets />
                                        </VBox.margin>
                                     </TableView>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="983.0" text="Switch to" />
                                  </children>
                               </VBox>
                            </children>
@@ -81,7 +79,7 @@
                 </Tab>
                 <Tab text="Class Attendance Overview">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="547.0" prefWidth="714.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="588.0" prefWidth="871.0">
                            <children>
                               <VBox prefHeight="511.0" prefWidth="732.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <padding>
@@ -94,22 +92,22 @@
                                  </font>
                               </Label>
                               <Separator layoutX="11.0" layoutY="45.0" prefHeight="1.0" prefWidth="711.0" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
-                              <TableView fx:id="tableView2" layoutX="10.0" layoutY="53.0" prefHeight="521.0" prefWidth="851.0">
+                              <TableView fx:id="tableView2" layoutX="10.0" layoutY="76.0" prefHeight="495.0" prefWidth="851.0">
                                 <columns>
                                   <TableColumn fx:id="studentListColumn" prefWidth="187.0" text="Student List" />
-                                  <TableColumn minWidth="0.0" prefWidth="34.0" text="Jan" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Feb" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Mar" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Apr" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="May " />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Jun" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Jul" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Aug" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Sep" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Oct" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Nov" />
-                                    <TableColumn minWidth="0.0" prefWidth="34.0" text="Dec" />
-                                    <TableColumn prefWidth="255.0" text="Total Student Assistance" />
+                                  <TableColumn fx:id="jan" minWidth="0.0" prefWidth="40.0" text="Jan" />
+                                    <TableColumn fx:id="feb" minWidth="0.0" prefWidth="34.0" text="Feb" />
+                                    <TableColumn fx:id="mar" minWidth="0.0" prefWidth="34.0" text="Mar" />
+                                    <TableColumn fx:id="apr" minWidth="0.0" prefWidth="34.0" text="Apr" />
+                                    <TableColumn fx:id="may" minWidth="0.0" prefWidth="34.0" text="May " />
+                                    <TableColumn fx:id="jun" minWidth="0.0" prefWidth="34.0" text="Jun" />
+                                    <TableColumn fx:id="jul" minWidth="0.0" prefWidth="34.0" text="Jul" />
+                                    <TableColumn fx:id="aug" minWidth="0.0" prefWidth="34.0" text="Aug" />
+                                    <TableColumn fx:id="sep" minWidth="0.0" prefWidth="34.0" text="Sep" />
+                                    <TableColumn fx:id="oct" minWidth="0.0" prefWidth="34.0" text="Oct" />
+                                    <TableColumn fx:id="nov" minWidth="0.0" prefWidth="34.0" text="Nov" />
+                                    <TableColumn fx:id="dec" minWidth="0.0" prefWidth="34.0" text="Dec" />
+                                    <TableColumn fx:id="totalStudentAssistance" prefWidth="255.0" text="Total Student Assistance" />
                                 </columns>
                               </TableView>
                            </children>
