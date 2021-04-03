@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-            Parent root = FXMLLoader.load( getClass().getResource("gui/View/AtteAutoMainWindow.fxml"));
+            Parent root = FXMLLoader.load( getClass().getResource("gui/View/MainWindow.fxml"));
             primaryStage.setTitle("Attendance Automation");
             primaryStage.setScene(new Scene(root));
             primaryStage.setResizable(false);
