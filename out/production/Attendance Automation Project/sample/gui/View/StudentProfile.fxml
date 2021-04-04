@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="608.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gui.Controller.ClassStudentProfile">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="614.0" prefWidth="877.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Student Profile/ Weeks">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="113.0" prefHeight="460.0" prefWidth="851.0">
+                          <columns>
+                            <TableColumn prefWidth="850.0" text="Weekly Classes" />
+                          </columns>
+                        </TableView>
+                        <ImageView fitHeight="87.0" fitWidth="90.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="114.0" layoutY="14.0" text="Name:" />
+                        <Label layoutX="116.0" layoutY="76.0" text="Email:" />
+                        <Label layoutX="116.0" layoutY="58.0" text="ID:" />
+                        <Label layoutX="720.0" layoutY="14.0" text="Last Login:" />
+                        <Hyperlink layoutX="714.0" layoutY="35.0" prefHeight="23.0" prefWidth="84.0" text="Change Email" />
+                        <Hyperlink layoutX="713.0" layoutY="56.0" prefHeight="31.0" prefWidth="103.0" text="Change Password" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Student Attendance Register">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="36.0" prefHeight="540.0" prefWidth="850.0">
+                          <columns>
+                            <TableColumn prefWidth="194.0" text="Weeks" />
+                            <TableColumn minWidth="0.0" prefWidth="446.0" text="Days" />
+                              <TableColumn minWidth="0.0" prefWidth="209.0" text="Submit Attendance" />
+                          </columns>
+                        </TableView>
+                        <ChoiceBox layoutX="765.0" layoutY="6.0" prefHeight="25.0" prefWidth="98.0" />
+                        <Label layoutX="716.0" layoutY="10.0" prefHeight="17.0" prefWidth="47.0" text="Months:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Hyperlink layoutX="791.0" layoutY="3.0" prefHeight="23.0" prefWidth="59.0" text=" Log out" />
+   </children>
+</AnchorPane>
