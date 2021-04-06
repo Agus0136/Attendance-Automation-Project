@@ -10,8 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="608.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gui.Controller.ClassStudentProfile">
+<AnchorPane prefHeight="608.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gui.Controller.ClassStudentProfile">
    <children>
       <TabPane layoutX="-1.0" prefHeight="614.0" prefWidth="877.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -54,6 +53,6 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Hyperlink layoutX="791.0" layoutY="3.0" prefHeight="23.0" prefWidth="59.0" text=" Log out" />
+      <Hyperlink fx:id="btnLogOut" layoutX="791.0" layoutY="3.0" onAction="#Loguot" prefHeight="23.0" prefWidth="59.0" text=" Log out" />
    </children>
 </AnchorPane>

@@ -22,7 +22,7 @@ public class DataBaseConnectionDAO {
             dataSource.setDatabaseName(config.getDBName());
             dataSource.setUser(config.getUsername());
             dataSource.setPassword(config.getPassword());
-            dataSource.setPortNumber(1433); //TODO: Add this to the config file
+            dataSource.setPortNumber(1433);
         } catch (IOException e) {
             e.printStackTrace();
             return;
