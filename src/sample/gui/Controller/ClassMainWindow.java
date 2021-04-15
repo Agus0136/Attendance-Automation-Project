@@ -1,71 +1,65 @@
 package sample.gui.Controller;
 
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import sample.be.Students;
+import sample.dal.DatabaseConnection;
 
-import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class ClassMainWindow implements Initializable {
 
-
-    public TextField emailText;
-    public TextField passText;
-    public Button btnLogin;
-
-    public ClassMainWindow(){
-
-    }
+    @FXML
+    private Label loginMessageLabel;
+    @FXML
+    private TextField usernameTextField;
+    @FXML
+    private PasswordField enterPasswordField;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
-    public void Login(ActionEvent actionEvent) throws IOException{
+    public void loginButtonOnAction (ActionEvent event) throws SQLException {
 
-        //if(EmailPassword()){
-
-            Stage currentStage = (Stage) btnLogin.getScene().getWindow();
-
-            Stage studentStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("/Sample/gui/View/StudentProfile.fxml"));
-            studentStage.setTitle("Attendance Menu");
-            studentStage.setScene(new Scene(root));
-            studentStage.show();
-            currentStage.close();
-        //}
-
-
-    }
-
-    public boolean EmailPassword(){
-
-        Students students = new Students(1,"ivan","ivan@easv.dk","123");
-
-
-        if (students.getEmail() == emailText.getText() && (students.getPassword() == passText.getText())) {
-            return true;
+        if (usernameTextField.getText().isBlank() == false && enterPasswordField.getText().isBlank() == false) {
+            validateLogin();
+        } else {
+            loginMessageLabel.setText("-Please enter Username and Password-");
         }
-
-        return false;
     }
 
+    private void validateLogin() throws SQLException {
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectionDB = connectNow.getConnection();
 
+        String verifyLogin = "SELECT * FROM StudentLogin";
+
+        try {
+            Statement statement = connectionDB.createStatement();
+            ResultSet queryResult = statement.executeQuery( verifyLogin );
+
+            while (queryResult.next()) {
+              if (queryResult.getInt( 2 ) == 2) {
+                  loginMessageLabel.setText( "Login Successfully" );
+              }else{
+                  loginMessageLabel.setText( "Invalid Login.Please try again" );
+              }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
 }
-
 
