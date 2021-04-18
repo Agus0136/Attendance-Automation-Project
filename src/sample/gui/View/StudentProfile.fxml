@@ -10,7 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="608.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gui.Controller.ClassStudentProfile">
+<AnchorPane prefHeight="608.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gui.Controller.ClassStudentProfile">
    <children>
       <TabPane layoutX="-1.0" prefHeight="614.0" prefWidth="877.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -27,8 +27,6 @@
                         <Label layoutX="114.0" layoutY="14.0" text="Name:" />
                         <Label layoutX="116.0" layoutY="76.0" text="Email:" />
                         <Label layoutX="116.0" layoutY="58.0" text="ID:" />
-                        <Label layoutX="720.0" layoutY="14.0" text="Last Login:" />
-                        <Hyperlink layoutX="714.0" layoutY="35.0" prefHeight="23.0" prefWidth="84.0" text="Change Email" />
                         <Hyperlink layoutX="713.0" layoutY="56.0" prefHeight="31.0" prefWidth="103.0" text="Change Password" />
                      </children>
                   </AnchorPane>
@@ -53,6 +51,6 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Hyperlink fx:id="btnLogOut" layoutX="791.0" layoutY="3.0" onAction="#Loguot" prefHeight="23.0" prefWidth="59.0" text=" Log out" />
+      <Hyperlink fx:id="btnLogOut" layoutX="791.0" layoutY="3.0" onAction="#Logout" prefHeight="23.0" prefWidth="59.0" text=" Log out" />
    </children>
 </AnchorPane>
