@@ -27,7 +27,7 @@ public class ClassStudentProfile implements Initializable {
     }
 
 
-    public void Loguot(ActionEvent actionEvent) throws IOException {
+    public void Logout(ActionEvent actionEvent) throws IOException {
 
         Stage currentStage = (Stage) btnLogOut.getScene().getWindow();
 
