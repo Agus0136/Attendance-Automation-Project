@@ -2,19 +2,15 @@ package sample.dal;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
-import sample.utils.config.DBConfigReader;
 
-import java.io.IOException;
 import java.sql.Connection;
-import java.io.IOException;
 import java.sql.SQLException;
 
-public class DataBaseConnectionDAO {
+public class DatabaseConnection {
 
-    private static SQLServerDataSource dataSource;
+    private SQLServerDataSource dataSource;
 
-    public DataBaseConnectionDAO() {
-
+    public DatabaseConnection() {
         dataSource = new SQLServerDataSource();
         dataSource.setServerName( "10.176.111.31" );
         dataSource.setDatabaseName( "Compulsory_Assignment_2" );
@@ -23,16 +19,16 @@ public class DataBaseConnectionDAO {
         dataSource.setPortNumber( 1433 );
     }
 
-    public static Connection getConnection() throws SQLServerException {
+    public Connection getConnection() throws SQLServerException {
         return dataSource.getConnection();
     }
 
     public static void main(String[] args) throws SQLException {
 
-        DataBaseConnectionDAO dataBaseConnectionDAO = new DataBaseConnectionDAO();
-        Connection connection = dataBaseConnectionDAO.getConnection();
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connection = databaseConnection.getConnection();
 
-        System.out.println( "Is it Open?" + !connection.isClosed() );
+        System.out.println( "Is it open?" + !connection.isClosed() );
 
         connection.close();
     }
